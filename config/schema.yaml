@@ -1,7 +1,8 @@
 columns:
   age: int64 
   workclass: object
-  fnlwgt: int64 
+  fnlwgt: int64
+  education: object 
   education_num: int64 
   marital_status: object
   occupation: object
@@ -11,8 +12,8 @@ columns:
   capital_gain: int64 
   capital_loss: int64 
   hours_per_week: int64 
-  native_country: object
-  wages: object
+  country: object
+  salary: object
 
 
 categorical_columns:
@@ -20,7 +21,7 @@ categorical_columns:
 - marital_status
 - occupation
 - relationship
-- native_country
+- country
 - race
 - sex
 
@@ -34,7 +35,7 @@ numerical_columns:
 - hours_per_week
 
 
-target_column: wages
+target_column: salary
 
 domain_value:
   marital-status:

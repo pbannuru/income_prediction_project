@@ -16,46 +16,46 @@
             <legend>Income Prediction Form</legend>
             <div class="mb-3">
                 <label class="form-label">age</label>
-                <input class="form-control" type="text" name="longitude" placeholder="Enter a value of longitude"
+                <input class="form-control" type="text" name="age" placeholder="Enter a value of age"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">workclass</label>
-                <input class="form-control" type="text" name="latitude" placeholder="Enter a value of latitude"
+                <input class="form-control" type="text" name="workclass" placeholder="Enter a value of workclass"
                     required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">fnlwgt</label>
-                <input class="form-control" type="text" name="housing_median_age"
-                    placeholder="Enter a value of housing_median_age" />
+                <input class="form-control" type="text" name="fnlwgt"placeholder="Enter a value of fnlwgt" 
+                    required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">education num</label>
-                <input class="form-control" type="text" name="total_rooms" placeholder="Enter a value of total_rooms"
+                <input class="form-control" type="text" name="education_num" placeholder="Enter a value of education_num"
                     required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">marital status</label>
-                <input class="form-control" type="text" name="total_bedrooms"
-                    placeholder="Enter a value of total_bedrooms" required />
+                <input class="form-control" type="text" name="marital_status" placeholder="Enter a value of marital_status" 
+                    required />
             </div>
             <div class="mb-3">
                 <label class="form-label">occupation</label>
-                <input class="form-control" type="text" name="population" placeholder="Enter a value of population"
+                <input class="form-control" type="text" name="occupation" placeholder="Enter a value of occupation"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">relationship</label>
-                <input class="form-control" type="text" name="households" placeholder="Enter a value of households"
+                <input class="form-control" type="text" name="relationship" placeholder="Enter a value of relationship"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">race</label>
-                <input class="form-control" type="text" name="median_income"
-                    placeholder="Enter a value of median_income" required />
+                <input class="form-control" type="text" name="race" placeholder="Enter a value of race"
+                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">sex</label>
@@ -65,39 +65,39 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">capital_gain</label>
-                <input class="form-control" type="text" name="total_bedrooms"
-                    placeholder="Enter a value of total_bedrooms" required />
+                <input class="form-control" type="text" name="capital_gain"
+                    placeholder="Enter a value of capital_gain" required />
             </div>
             <div class="mb-3">
                 <label class="form-label">capital_loss</label>
-                <input class="form-control" type="text" name="population" placeholder="Enter a value of population"
+                <input class="form-control" type="text" name="capital_loss" placeholder="Enter a value of capital_loss"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">hours_per_week</label>
-                <input class="form-control" type="text" name="households" placeholder="Enter a value of households"
+                <input class="form-control" type="text" name="hours_per_week" placeholder="Enter a value of hours_per_week"
                     required />
            
             </div>
             <div class="mb-3">
                 <label class="form-label">native_country</label>
-                <input class="form-control" type="text" name="total_bedrooms"
-                    placeholder="Enter a value of total_bedrooms" required />
+                <input class="form-control" type="text" name="native_country" placeholder="Enter a value of native_country" 
+                    required />
             </div>
            
-                    <option value="<1H OCEAN">
+                    <option value="<USA">
                         &lt;1H OCEAN
                     </option>
-                    <option value="INLAND">
+                    <option value="INDIA">
                         INLAND
                     </option>
-                    <option value="NEAR BAY">
+                    <option value="MALASIYA">
                         NEAR BAY
                     </option>
-                    <option value="NEAR OCEAN">
+                    <option value="CUBA">
                         NEAR OCEAN
                     </option>
-                    <option value="ISLAND">
+                    <option value="THAILAND">
                         ISLAND
                     </option>
 
@@ -105,7 +105,7 @@
             </div>
             <div class="mb-3">
 
-                <input class="btn btn-primary" type="submit" value="Predict Median House Value" required />
+                <input class="btn btn-primary" type="submit" value="Predict income_prediction Value" required />
             </div>
 
         </form>
@@ -114,18 +114,18 @@
     <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
         <div class="card">
             <div class="card-header">
-              California housing price
+              income prediction
             </div>
             <div class="card-body">
-        {% if context['housing_data'] is not none %}
+        {% if context['income_prediction_data'] is not none %}
         <table class="table table-striped">
-            <caption>Califoria Housing Prediction </caption>
+            <caption>income prediction </caption>
             <tr>
                 <th>Input Feature</th>
                 <th>Feature Value</th>
 
             </tr>
-            {% for column,value in context['housing_data'].items() %}
+            {% for column,value in context['income_prediction_data'].items() %}
 
 
 
@@ -137,9 +137,9 @@
             {% endfor %}
             <tr>
 
-                <td>median_house_value </td>
+                <td>wage </td>
                 <td>
-                    {{ context['median_house_value'] }}
+                    {{ context['wage'] }}
                 </td>
             </tr>
         </table>
